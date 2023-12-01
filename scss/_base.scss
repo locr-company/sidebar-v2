@@ -7,6 +7,11 @@ $width-md: 390px !default;
 $width-sm: 305px !default;
 $width-xs: 100% !default;
 
+$height-lg: 460px !default;
+$height-md: 390px !default;
+$height-sm: 305px !default;
+$height-xs: 100% !default;
+
 $sidebar-z-index: 2000 !default;
 $sidebar-transition: 500ms !default;
 
@@ -46,11 +51,11 @@ $move-map-in-xs: true !default;
         transition: width $sidebar-transition;
     }
 
-    @media(min-width:$threshold-sm) and (max-width:$threshold-md - 1px) {
+    @media(min-width: $threshold-sm) and (max-width: ($threshold-md - 1px)) {
         width: $width-sm;
     }
 
-    @media(min-width:$threshold-md) and (max-width:$threshold-lg - 1px) {
+    @media(min-width: $threshold-md) and (max-width: ($threshold-lg - 1px)) {
         width: $width-md;
     }
 
@@ -75,10 +80,59 @@ $move-map-in-xs: true !default;
     }
 }
 
+.sidebar-top, .sidebar-bottom {
+    top: 0;
+    right: 0;
+    width: $tab-size;
+    height: $height-xs;
+
+    &.collapsed {
+        width: $tab-size;
+        height: $tab-size;
+    }
+
+    @media(min-width:$threshold-sm) {
+        left: $sidebar-margins;
+        right: $sidebar-margins;
+
+        transition: height $sidebar-transition;
+    }
+
+    @media(min-width: $threshold-sm) and (max-height: ($threshold-md - 1px)) {
+        height: $height-sm;
+    }
+
+    @media(min-width: $threshold-md) and (max-height: ($threshold-lg - 1px)) {
+        height: $height-md;
+    }
+
+    @media(min-width: $threshold-lg) {
+        height: $height-lg;
+    }
+
+    @media(min-width: $threshold-sm) {
+        top: $sidebar-margins;
+    }
+}
+
+.sidebar-bottom {
+    top: initial;
+    bottom: 0;
+
+    @media(min-width:$threshold-sm) {
+        top: initial;
+        bottom: $sidebar-margins;
+    }
+}
+
 .sidebar-tabs {
     top: 0;
     bottom: 0;
     height: 100%;
+
+    & > ul + ul {
+        bottom: 0;
+    }
 
     .sidebar-left & {
         left: 0;
@@ -88,12 +142,28 @@ $move-map-in-xs: true !default;
         right: 0;
     }
 
+    .sidebar-top &, .sidebar-bottom & {
+        top: 0;
+
+        & > ul + ul {
+            top: 0;
+            right: 0;
+        }
+    }
+
     background-color: $tabs-bg;
 
     &, & > ul {
         position: absolute;
 
         width: $tab-size;
+
+        .sidebar-top &, .sidebar-bottom & {
+            width: 100%;
+            & > ul + ul {
+                width: $tab-size;
+            }
+        }
 
         margin: 0;
         padding: 0;
@@ -103,6 +173,11 @@ $move-map-in-xs: true !default;
         & > li {
             width: 100%;
             height: $tab-size;
+
+            .sidebar-top &, .sidebar-bottom & {
+                float: left;
+                width: $tab-size;
+            }
 
             color: $tab-fg;
             @if $tab-bg { background: $tab-bg; }
@@ -153,10 +228,6 @@ $move-map-in-xs: true !default;
             }
         }
     }
-
-    & > ul + ul {
-        bottom: 0;
-    }
 }
 
 .sidebar-content {
@@ -170,6 +241,11 @@ $move-map-in-xs: true !default;
     .sidebar-right & {
         left: 0;
         right: $tab-size;
+    }
+
+    .sidebar-top &, .sidebar-bottom & {
+        top: $tab-size;
+        bottom: 0;
     }
 
     top: 0;
@@ -198,15 +274,15 @@ $move-map-in-xs: true !default;
         display: block;
     }
 
-    @media(min-width:$threshold-sm) and (max-width:$threshold-md - 1px) {
+    @media(min-width: $threshold-sm) and (max-width: ($threshold-md - 1px)) {
         min-width: $width-sm - $tab-size;
     }
 
-    @media(min-width:$threshold-md) and (max-width:$threshold-lg - 1px) {
+    @media(min-width: $threshold-md) and (max-width: ($threshold-lg - 1px)) {
         min-width: $width-md - $tab-size;
     }
 
-    @media(min-width:$threshold-lg) {
+    @media(min-width: $threshold-lg) {
         min-width: $width-lg - $tab-size;
     }
 }
@@ -240,6 +316,10 @@ $move-map-in-xs: true !default;
     .sidebar-right & {
         left: 0;
     }
+
+    .sidebar-top &, .sidebar-bottom & {
+        bottom: 0;
+    }
 }
 
 @if $move-map-in-xs {
@@ -256,6 +336,14 @@ $move-map-in-xs: true !default;
 
         @media(min-width:$threshold-sm) {
             margin-right: 0;
+        }
+    }
+
+    .sidebar-top ~ .sidebar-map, .sidebar-bottom ~ .sidebar-map {
+        margin-top: $tab-size;
+
+        @media(min-width:$threshold-sm) {
+            margin-top: 0;
         }
     }
 }

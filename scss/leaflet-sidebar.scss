@@ -8,7 +8,7 @@ $tabs-bg: #fff !default;
 $tab-hover-fg: #000 !default;
 $tab-hover-bg: #eee !default;
 $tab-active-fg: #fff !default;
-$tab-active-bg: #0074d9 !default;
+$tab-active-bg: #ff7300 !default;
 
 @import 'base';
 
@@ -32,25 +32,25 @@ $tab-active-bg: #0074d9 !default;
 .sidebar-left {
 
     & ~ .sidebar-map .leaflet-left {
-        @media(min-width:$threshold-sm) {
+        @media(min-width: $threshold-sm) {
             transition: left $sidebar-transition;
         }
 
-        @media(min-width:$threshold-sm) and (max-width:$threshold-md - 1px) {
+        @media(min-width: $threshold-sm) and (max-width: ($threshold-md - 1px)) {
             left: $width-sm + $sidebar-margins;
         }
 
-        @media(min-width:$threshold-md) and (max-width:$threshold-lg - 1px) {
+        @media(min-width: $threshold-md) and (max-width: ($threshold-lg - 1px)) {
             left: $width-md + $sidebar-margins;
         }
 
-        @media(min-width:$threshold-lg) {
+        @media(min-width: $threshold-lg) {
             left: $width-lg + $sidebar-margins;
         }
     }
 
     &.collapsed ~ .sidebar-map .leaflet-left {
-        @media(min-width:$threshold-sm) {
+        @media(min-width: $threshold-sm) {
             left: $tab-size + $sidebar-margins;
         }
     }
@@ -59,26 +59,89 @@ $tab-active-bg: #0074d9 !default;
 .sidebar-right {
 
     & ~ .sidebar-map .leaflet-right {
-        @media(min-width:$threshold-sm) {
+        @media(min-width: $threshold-sm) {
             transition: right $sidebar-transition;
         }
 
-        @media(min-width:$threshold-sm) and (max-width:$threshold-md - 1px) {
+        @media(min-width: $threshold-sm) and (max-width: ($threshold-md - 1px)) {
             right: $width-sm + $sidebar-margins;
         }
 
-        @media(min-width:$threshold-md) and (max-width:$threshold-lg - 1px) {
+        @media(min-width: $threshold-md) and (max-width: ($threshold-lg - 1px)) {
             right: $width-md + $sidebar-margins;
         }
 
-        @media(min-width:$threshold-lg) {
+        @media(min-width: $threshold-lg) {
             right: $width-lg + $sidebar-margins;
         }
     }
 
     &.collapsed ~ .sidebar-map .leaflet-right {
-        @media(min-width:$threshold-sm) {
+        @media(min-width: $threshold-sm) {
             right: $tab-size + $sidebar-margins;
+        }
+    }
+}
+
+.sidebar-top, .sidebar-bottom {
+    width: auto !important;
+
+    .sidebar-tabs {
+        width: 100%;
+    }
+    .sidebar-content {
+        width: 100%;
+    }
+}
+
+.sidebar-top {
+    & ~ .sidebar-map .leaflet-top {
+        @media(min-width: $threshold-sm) {
+            transition: top $sidebar-transition;
+        }
+
+        @media(min-width: $threshold-sm) and (max-width: ($threshold-md - 1px)) {
+            top: $height-sm + $sidebar-margins;
+        }
+
+        @media(min-width: $threshold-md) and (max-width: ($threshold-lg - 1px)) {
+            top: $height-md + $sidebar-margins;
+        }
+
+        @media(min-width: $threshold-lg) {
+            top: $height-lg + $sidebar-margins;
+        }
+    }
+
+    &.collapsed ~ .sidebar-map .leaflet-top {
+        @media(min-width: $threshold-sm) {
+            top: $tab-size + $sidebar-margins;
+        }
+    }
+}
+
+.sidebar-bottom {
+    & ~ .sidebar-map .leaflet-bottom {
+        @media(min-width: $threshold-sm) {
+            transition: bottom $sidebar-transition;
+        }
+
+        @media(min-width: $threshold-sm) and (max-width: ($threshold-md - 1px)) {
+            bottom: $height-sm + $sidebar-margins;
+        }
+
+        @media(min-width: $threshold-md) and (max-width: ($threshold-lg - 1px)) {
+            bottom: $height-md + $sidebar-margins;
+        }
+
+        @media(min-width: $threshold-lg) {
+            bottom: $height-lg + $sidebar-margins;
+        }
+    }
+
+    &.collapsed ~ .sidebar-map .leaflet-bottom {
+        @media(min-width: $threshold-sm) {
+            bottom: $tab-size + $sidebar-margins;
         }
     }
 }

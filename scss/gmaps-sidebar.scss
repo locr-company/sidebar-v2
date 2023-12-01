@@ -10,7 +10,7 @@ $tabs-bg: #fff !default;
 $tab-active-fg: #000 !default;
 $tab-active-bg: #febf00 !default;
 $tab-hover-fg: #000 !default;
-$tab-hover-bg: color.mix($tabs-bg, $tab-active-bg, 90%) !default;
+$tab-hover-bg: #eee !default;
 
 @import 'base';
 
@@ -34,11 +34,11 @@ $tab-hover-bg: color.mix($tabs-bg, $tab-active-bg, 90%) !default;
             transition: margin-left $sidebar-transition;
         }
 
-        @media(min-width:$threshold-sm) and (max-width:$threshold-md - 1px) {
+        @media(min-width:$threshold-sm) and (max-width:($threshold-md - 1px)) {
             margin-left: $width-sm + $sidebar-margins * 2 !important;
         }
 
-        @media(min-width:$threshold-md) and (max-width:$threshold-lg - 1px) {
+        @media(min-width:$threshold-md) and (max-width:($threshold-lg - 1px)) {
             margin-left: $width-md + $sidebar-margins * 2 !important;
         }
 
@@ -65,11 +65,41 @@ $tab-hover-bg: color.mix($tabs-bg, $tab-active-bg, 90%) !default;
             transition: margin-right $sidebar-transition;
         }
 
-        @media(min-width:$threshold-sm) and (max-width:$threshold-md - 1px) {
+        @media(min-width:$threshold-sm) and (max-width:($threshold-md - 1px)) {
             margin-right: $width-sm + $sidebar-margins * 2 !important;
         }
 
-        @media(min-width:$threshold-md) and (max-width:$threshold-lg - 1px) {
+        @media(min-width:$threshold-md) and (max-width:($threshold-lg - 1px)) {
+            margin-right: $width-md + $sidebar-margins * 2 !important;
+        }
+
+        @media(min-width:$threshold-lg) {
+            margin-right: $width-lg + $sidebar-margins * 2 !important;
+        }
+    }
+
+    @media(min-width:$threshold-sm) {
+        &.collapsed ~ .sidebar-map .gm-style > div.gmnoprint[style*="right: 28px"] {
+            margin-right: $tab-size + $sidebar-margins * 2 !important;
+        }
+    }
+}
+
+.sidebar-top {
+    @media(min-width:$threshold-sm) {
+        bottom: $sidebar-right-bottom-margin;
+    }
+
+    & ~ .sidebar-map .gm-style > div.gmnoprint[style*="right: 28px"] {
+        @media(min-width:$threshold-sm) {
+            transition: margin-right $sidebar-transition;
+        }
+
+        @media(min-width:$threshold-sm) and (max-width:($threshold-md - 1px)) {
+            margin-right: $width-sm + $sidebar-margins * 2 !important;
+        }
+
+        @media(min-width:$threshold-md) and (max-width:($threshold-lg - 1px)) {
             margin-right: $width-md + $sidebar-margins * 2 !important;
         }
 
