@@ -10,7 +10,7 @@ $tabs-bg: #fff !default;
 $tab-active-fg: #000 !default;
 $tab-active-bg: #febf00 !default;
 $tab-hover-fg: #000 !default;
-$tab-hover-bg: ($tabs-bg * 9 + $tab-active-bg) / 10 !default;
+$tab-hover-bg: color.mix($tabs-bg, $tab-active-bg, 90%) !default;
 
 @import 'base';
 

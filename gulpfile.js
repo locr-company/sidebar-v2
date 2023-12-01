@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var cleanCSS = require('gulp-clean-css');
-var sass = require('gulp-sass');
+var sass = require('gulp-sass')(require('sass'));
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 
