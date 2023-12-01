@@ -49,10 +49,7 @@
         <!-- Tab panes -->
         <div class="sidebar-content">
             <div class="sidebar-pane" id="home">
-                <h1 class="sidebar-header">
-                    sidebar-v2
-                    <span class="sidebar-close"><i class="fa fa-caret-left"></i></span>
-                </h1>
+                <h1 class="sidebar-header">sidebar-v2</h1>
 
                 <p>A responsive sidebar for <a href="https://leafletjs.com/">Leaflet</a>.</p>
 
@@ -66,15 +63,15 @@
             </div>
 
             <div class="sidebar-pane" id="profile">
-                <h1 class="sidebar-header">Profile<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+                <h1 class="sidebar-header">Profile</h1>
             </div>
 
             <div class="sidebar-pane" id="messages">
-                <h1 class="sidebar-header">Messages<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+                <h1 class="sidebar-header">Messages</h1>
             </div>
 
             <div class="sidebar-pane" id="settings">
-                <h1 class="sidebar-header">Settings<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+                <h1 class="sidebar-header">Settings</h1>
             </div>
         </div>
     </div>
@@ -89,7 +86,7 @@
     <script src="../js/leaflet-sidebar.js"></script>
 
     <script>
-        var map = L.map('map');
+        const map = L.map('map');
         map.setView([51.2, 7], 9);
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -97,9 +94,13 @@
             attribution: 'Map data &copy; OpenStreetMap contributors'
         }).addTo(map);
 
-        var marker = L.marker([51.2, 7]).addTo(map);
+        const marker = L.marker([51.2, 7]).addTo(map);
 
-        var sidebar = L.control.sidebar('sidebar').addTo(map);
+        const urlParams = new URLSearchParams(window.location.search);
+        const sidebarOptions = {
+            position: urlParams.get('position') ?? 'left'
+        };
+        const sidebar = L.control.sidebar('sidebar', sidebarOptions).addTo(map);
     </script>
 </body>
 </html>

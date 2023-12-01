@@ -13,6 +13,8 @@ It is more or less a successor of the [leaflet-sidebar](https://github.com/turbo
 
 Example code at [`examples/index.html`](examples/index.html) ([Preview](https://locr-company.github.io/sidebar-v2/examples/index.html))
 
+Sidebar on the right side `examples/index.html?position=right` ([Preview](https://locr-company.github.io/sidebar-v2/examples/index.html?position=right))
+
 
 ## License
 
