@@ -8,10 +8,10 @@
     "map",
     "openlayers"
   ],
-  "homepage": "https://github.com/turbo87/sidebar-v2",
-  "bugs": "https://github.com/turbo87/sidebar-v2/issues",
+  "homepage": "https://github.com/locr-company/sidebar-v2",
+  "bugs": "https://github.com/locr-company/sidebar-v2/issues",
   "license": "MIT",
-  "author": "Tobias Bieniek <tobias.bieniek@gmx.de>",
+  "author": "Ringo Leese <r.leese@locr.com>",
   "files": [
     "css",
     "js",
@@ -19,7 +19,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/turbo87/sidebar-v2.git"
+    "url": "https://github.com/locr-company/sidebar-v2.git"
   },
   "scripts": {
     "lint:css": "stylelint **/*.scss",
