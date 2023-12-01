@@ -7,11 +7,11 @@ It is more or less a successor of the [leaflet-sidebar](https://github.com/turbo
 ![Demo](doc/sidebar-v2.gif)
 
 
-## [Leaflet](http://leafletjs.com/)
+## [Leaflet](https://leafletjs.com/)
 
 ![Sidebar collapsed](doc/leaflet-1.png) ![Sidebar extended](doc/leaflet-2.png)
 
-Example code at [`examples/index.html`](examples/index.html) ([Preview](http://locr-company.github.io/sidebar-v2/examples/index.html))
+Example code at [`examples/index.html`](examples/index.html) ([Preview](https://locr-company.github.io/sidebar-v2/examples/index.html))
 
 
 ## License
