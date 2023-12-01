@@ -349,8 +349,10 @@
   }
 }
 
-.sidebar-top, .sidebar-bottom {
-  width: auto !important;
+@media (min-width: 768px) {
+  .sidebar-top, .sidebar-bottom {
+    width: auto !important;
+  }
 }
 .sidebar-top .sidebar-tabs, .sidebar-bottom .sidebar-tabs {
   width: 100%;

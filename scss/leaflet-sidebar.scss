@@ -84,7 +84,9 @@ $tab-active-bg: #ff7300 !default;
 }
 
 .sidebar-top, .sidebar-bottom {
-    width: auto !important;
+    @media(min-width: $threshold-sm) {
+        width: auto !important;
+    }
 
     .sidebar-tabs {
         width: 100%;
