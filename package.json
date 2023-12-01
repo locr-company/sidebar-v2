@@ -22,10 +22,12 @@
     "url": "https://github.com/locr-company/sidebar-v2.git"
   },
   "scripts": {
+    "minify": "gulp",
     "lint:css": "stylelint **/*.scss",
     "lint:js": "eslint . --cache"
   },
   "devDependencies": {
+    "@types/leaflet": "^1.9.8",
     "eslint": "^8.54.0",
     "gulp": "^4.0.2",
     "gulp-clean-css": "~4.3.0",

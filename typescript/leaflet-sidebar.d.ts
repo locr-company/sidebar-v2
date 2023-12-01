@@ -12,7 +12,7 @@ declare namespace L {
       constructor(id: string, options?: SidebarOptions);
       options: Control.ControlOptions;
       addTo(map: L.Map): this;
-      remove(map: L.Map): this;
+      remove(): this;
       open(id: string): this;
       close(): this;
     }
