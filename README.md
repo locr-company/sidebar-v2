@@ -11,28 +11,28 @@ It is more or less a successor of the [leaflet-sidebar](https://github.com/turbo
 
 ![Sidebar collapsed](doc/leaflet-1.png) ![Sidebar extended](doc/leaflet-2.png)
 
-Example code at [`examples/index.html`](examples/index.html) ([Preview](http://turbo87.github.io/sidebar-v2/examples/index.html))
+Example code at [`examples/index.html`](examples/index.html) ([Preview](http://locr-company.github.io/sidebar-v2/examples/index.html))
 
 
 ## [OpenLayers 3](http://openlayers.org/)
 
 ![Sidebar collapsed](doc/ol3-1.png) ![Sidebar extended](doc/ol3-2.png)
 
-Example code at [`examples/ol3.html`](examples/ol3.html) ([Preview](http://turbo87.github.io/sidebar-v2/examples/ol3.html))
+Example code at [`examples/ol3.html`](examples/ol3.html) ([Preview](http://locr-company.github.io/sidebar-v2/examples/ol3.html))
 
 
 ## [OpenLayers 2](http://openlayers.org/two/)
 
 ![Sidebar collapsed](doc/ol2-1.png) ![Sidebar extended](doc/ol2-2.png)
 
-Example code at [`examples/ol2.html`](examples/ol2.html) ([Preview](http://turbo87.github.io/sidebar-v2/examples/ol2.html))
+Example code at [`examples/ol2.html`](examples/ol2.html) ([Preview](http://locr-company.github.io/sidebar-v2/examples/ol2.html))
 
 
 ## [Google Maps](https://developers.google.com/maps/)
 
 ![Sidebar collapsed](doc/gmaps-1.png) ![Sidebar extended](doc/gmaps-2.png)
 
-Example code at [`examples/gmaps.html`](examples/gmaps.html) ([Preview](http://turbo87.github.io/sidebar-v2/examples/gmaps.html))
+Example code at [`examples/gmaps.html`](examples/gmaps.html) ([Preview](http://locr-company.github.io/sidebar-v2/examples/gmaps.html))
 
 
 ## License
