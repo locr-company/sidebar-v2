@@ -52,8 +52,8 @@ L.Control.Sidebar = L.Control.extend(/** @lends L.Control.Sidebar.prototype */ {
                 L.DomUtil.hasClass(child, 'sidebar-pane')) {
                 this._panes.push(child);
 
-                var closeButtons = child.querySelectorAll('.sidebar-close');
-                for (var j = 0, len = closeButtons.length; j < len; j++)
+                const closeButtons = child.querySelectorAll('.sidebar-close');
+                for (let j = 0, len = closeButtons.length; j < len; j++)
                     this._closeButtons.push(closeButtons[j]);
             }
         }
@@ -70,7 +70,7 @@ L.Control.Sidebar = L.Control.extend(/** @lends L.Control.Sidebar.prototype */ {
 
         for (let i = this._tabitems.length - 1; i >= 0; i--) {
             const child = this._tabitems[i];
-            var sub = child.querySelector('a');
+            const sub = child.querySelector('a');
             if (sub.hasAttribute('href') && sub.getAttribute('href').slice(0, 1) == '#') {
                 L.DomEvent
                     .on(sub, 'click', L.DomEvent.preventDefault)
@@ -187,7 +187,7 @@ L.Control.Sidebar = L.Control.extend(/** @lends L.Control.Sidebar.prototype */ {
  * Creates a new sidebar.
  *
  * @example
- * var sidebar = L.control.sidebar('sidebar').addTo(map);
+ * const sidebar = L.control.sidebar('sidebar').addTo(map);
  *
  * @param {string} id - The id of the sidebar element (without the # character)
  * @param {Object} [options] - Optional options object
