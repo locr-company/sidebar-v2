@@ -1,8 +1,8 @@
-var gulp = require('gulp');
-var cleanCSS = require('gulp-clean-css');
-var sass = require('gulp-sass')(require('sass'));
-var rename = require('gulp-rename');
-var uglify = require('gulp-uglify');
+const gulp = require('gulp');
+const cleanCSS = require('gulp-clean-css');
+const sass = require('gulp-sass')(require('sass'));
+const rename = require('gulp-rename');
+const uglify = require('gulp-uglify');
 
 // SASS compilation
 gulp.task('sass', function() {
