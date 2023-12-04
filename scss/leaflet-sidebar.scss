@@ -17,7 +17,18 @@ $tab-active-bg: #ff7300 !default;
 
     &.leaflet-touch {
         box-shadow: none;
+    }
+    &.leaflet-touch.sidebar-left {
         border-right: $sidebar-touch-border;
+    }
+    &.leaflet-touch.sidebar-right {
+        border-left: $sidebar-touch-border;
+    }
+    &.leaflet-touch.sidebar-top {
+        border-bottom: $sidebar-touch-border;
+    }
+    &.leaflet-touch.sidebar-bottom {
+        border-top: $sidebar-touch-border;
     }
 
     @media(min-width: $threshold-sm) {

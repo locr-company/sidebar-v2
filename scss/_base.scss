@@ -357,11 +357,19 @@ $move-map-in-xs: true !default;
         }
     }
 
-    .sidebar-top ~ .sidebar-map, .sidebar-bottom ~ .sidebar-map {
+    .sidebar-top ~ .sidebar-map {
         margin-top: $tab-size;
 
         @media(min-width:$threshold-sm) {
             margin-top: 0;
+        }
+    }
+
+    .sidebar-bottom ~ .sidebar-map {
+        margin-bottom: $tab-size;
+
+        @media(min-width:$threshold-sm) {
+            margin-bottom: 0;
         }
     }
 }
