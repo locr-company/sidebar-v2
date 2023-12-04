@@ -20,7 +20,7 @@ $tab-active-bg: #ff7300 !default;
         border-right: $sidebar-touch-border;
     }
 
-    @media(min-width:$threshold-sm) {
+    @media(min-width: $threshold-sm) {
         border-radius: $sidebar-border-radius;
 
         &.leaflet-touch {

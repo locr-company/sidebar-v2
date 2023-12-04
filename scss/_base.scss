@@ -32,21 +32,40 @@ $move-map-in-xs: true !default;
 .sidebar {
     position: absolute;
 
-    top: 0;
-    bottom: 0;
+    &.sidebar-left, &.sidebar-right {
+        top: 0;
+        bottom: 0;
+    }
+    &.sidebar-top, &.sidebar-bottom {
+        left: 0;
+        right: 0;
+    }
+
     width: $width-xs;
 
     overflow: hidden;
 
     z-index: $sidebar-z-index;
 
-    &.collapsed {
-        width: $tab-size;
+    @media not (min-width: $threshold-sm) {
+        &.collapsed.sidebar-left, &.collapsed.sidebar-right {
+            width: $tab-size;
+        }
     }
 
-    @media(min-width:$threshold-sm) {
-        top: $sidebar-margins;
-        bottom: $sidebar-margins;
+    @media(min-width: $threshold-sm) {
+        &.collapsed {
+            width: $tab-size;
+        }
+
+        &.sidebar-left, &.sidebar-right {
+            top: $sidebar-margins;
+            bottom: $sidebar-margins;
+        }
+        &.sidebar-top, &.sidebar-bottom {
+            left: $sidebar-margins;
+            right: $sidebar-margins;
+        }
 
         transition: width $sidebar-transition;
     }
@@ -82,12 +101,11 @@ $move-map-in-xs: true !default;
 
 .sidebar-top, .sidebar-bottom {
     top: 0;
-    right: 0;
-    width: $tab-size;
+    /* width: $tab-size; */
     height: $height-xs;
 
     &.collapsed {
-        width: $tab-size;
+        /* width: $tab-size; */
         height: $tab-size;
     }
 
