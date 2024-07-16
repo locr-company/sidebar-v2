@@ -25,7 +25,7 @@
     "gulp": "gulp",
     "minify": "gulp",
     "lint:scss": "stylelint **/*.scss",
-    "lint:js": "eslint . --cache"
+    "lint:js": "eslint ."
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.1",
