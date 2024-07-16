@@ -131,9 +131,6 @@
 .sidebar-top .sidebar-tabs, .sidebar-bottom .sidebar-tabs, .sidebar-top .sidebar-tabs > ul, .sidebar-bottom .sidebar-tabs > ul {
   width: 100%;
 }
-.sidebar-top .sidebar-tabs > ul + ul, .sidebar-bottom .sidebar-tabs > ul + ul, .sidebar-top .sidebar-tabs > ul > ul + ul, .sidebar-bottom .sidebar-tabs > ul > ul + ul {
-  width: 40px;
-}
 .sidebar-tabs > li, .sidebar-tabs > ul > li {
   width: 100%;
   height: 40px;
@@ -187,6 +184,7 @@
 .sidebar-top .sidebar-tabs > ul + ul, .sidebar-bottom .sidebar-tabs > ul + ul {
   top: 0;
   right: 0;
+  width: 40px;
 }
 
 .sidebar-content {

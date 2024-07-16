@@ -150,10 +150,6 @@ $move-map-in-xs: true !default;
 
         .sidebar-top &, .sidebar-bottom & {
             width: 100%;
-
-            & > ul + ul {
-                width: $tab-size;
-            }
         }
 
         & > li {
@@ -228,6 +224,7 @@ $move-map-in-xs: true !default;
         & > ul + ul {
             top: 0;
             right: 0;
+            width: $tab-size;
         }
     }
 }
