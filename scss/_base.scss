@@ -9,6 +9,7 @@ $height-lg: 460px !default;
 $height-md: 390px !default;
 $height-sm: 305px !default;
 $height-xs: 100% !default;
+$sidebar-shadow: 0 1px 5px rgb(0 0 0 / 65%) !default;
 $sidebar-z-index: 2000 !default;
 $sidebar-transition: 500ms !default;
 $tab-size: 40px !default;
@@ -27,6 +28,7 @@ $move-map-in-xs: true !default;
     width: $width-xs;
     overflow: hidden;
     z-index: $sidebar-z-index;
+    box-shadow: $sidebar-shadow;
 
     &.sidebar-left, &.sidebar-right {
         top: 0;
@@ -93,7 +95,6 @@ $move-map-in-xs: true !default;
 
 .sidebar-top, .sidebar-bottom {
     top: 0;
-
     height: $height-xs;
 
     &.collapsed {

@@ -1,7 +1,6 @@
 $sidebar-margins: 10px !default;
 $sidebar-border-radius: 4px !default;
 $sidebar-touch-border: 2px solid rgb(0 0 0 / 20%) !default;
-$sidebar-shadow: 0 1px 5px rgb(0 0 0 / 65%) !default;
 $tab-fg: #333 !default;
 $tabs-bg: #fff !default;
 $tab-hover-fg: #000 !default;
@@ -12,8 +11,6 @@ $tab-active-bg: #ff7300 !default;
 @import 'base';
 
 .sidebar {
-    box-shadow: $sidebar-shadow;
-
     &.leaflet-touch {
         box-shadow: none;
     }

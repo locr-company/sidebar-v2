@@ -3,6 +3,7 @@
   width: 100%;
   overflow: hidden;
   z-index: 2000;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
 }
 .sidebar.sidebar-left, .sidebar.sidebar-right {
   top: 0;
@@ -301,9 +302,6 @@
   }
 }
 
-.sidebar {
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
-}
 .sidebar.leaflet-touch {
   box-shadow: none;
 }
