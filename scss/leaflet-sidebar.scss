@@ -1,8 +1,7 @@
 $sidebar-margins: 10px !default;
 $sidebar-border-radius: 4px !default;
-$sidebar-touch-border: 2px solid rgba(0, 0, 0, 0.2) !default;
-$sidebar-shadow: 0 1px 5px rgba(0, 0, 0, 0.65) !default;
-
+$sidebar-touch-border: 2px solid rgb(0 0 0 / 20%) !default;
+$sidebar-shadow: 0 1px 5px rgb(0 0 0 / 65%) !default;
 $tab-fg: #333 !default;
 $tabs-bg: #fff !default;
 $tab-hover-fg: #000 !default;
@@ -18,15 +17,19 @@ $tab-active-bg: #ff7300 !default;
     &.leaflet-touch {
         box-shadow: none;
     }
+
     &.leaflet-touch.sidebar-left {
         border-right: $sidebar-touch-border;
     }
+
     &.leaflet-touch.sidebar-right {
         border-left: $sidebar-touch-border;
     }
+
     &.leaflet-touch.sidebar-top {
         border-bottom: $sidebar-touch-border;
     }
+
     &.leaflet-touch.sidebar-bottom {
         border-top: $sidebar-touch-border;
     }
@@ -41,7 +44,6 @@ $tab-active-bg: #ff7300 !default;
 }
 
 .sidebar-left {
-
     & ~ .sidebar-map .leaflet-left {
         @media(min-width: $threshold-sm) {
             transition: left $sidebar-transition;
@@ -68,7 +70,6 @@ $tab-active-bg: #ff7300 !default;
 }
 
 .sidebar-right {
-
     & ~ .sidebar-map .leaflet-right {
         @media(min-width: $threshold-sm) {
             transition: right $sidebar-transition;
@@ -102,6 +103,7 @@ $tab-active-bg: #ff7300 !default;
     .sidebar-tabs {
         width: 100%;
     }
+
     .sidebar-content {
         width: 100%;
     }

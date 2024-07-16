@@ -121,22 +121,6 @@
   height: 100%;
   background-color: #fff;
 }
-.sidebar-tabs > ul + ul {
-  bottom: 0;
-}
-.sidebar-left .sidebar-tabs {
-  left: 0;
-}
-.sidebar-right .sidebar-tabs {
-  right: 0;
-}
-.sidebar-top .sidebar-tabs, .sidebar-bottom .sidebar-tabs {
-  top: 0;
-}
-.sidebar-top .sidebar-tabs > ul + ul, .sidebar-bottom .sidebar-tabs > ul + ul {
-  top: 0;
-  right: 0;
-}
 .sidebar-tabs, .sidebar-tabs > ul {
   position: absolute;
   width: 40px;
@@ -170,15 +154,6 @@
   color: #fff;
   background-color: #ff7300;
 }
-.sidebar-tabs > li.disabled, .sidebar-tabs > ul > li.disabled {
-  color: rgba(51, 51, 51, 0.4);
-}
-.sidebar-tabs > li.disabled:hover, .sidebar-tabs > ul > li.disabled:hover {
-  background: transparent;
-}
-.sidebar-tabs > li.disabled > a, .sidebar-tabs > ul > li.disabled > a {
-  cursor: default;
-}
 .sidebar-tabs > li > a, .sidebar-tabs > ul > li > a {
   display: block;
   width: 100%;
@@ -188,14 +163,38 @@
   text-decoration: none;
   text-align: center;
 }
+.sidebar-tabs > li.disabled, .sidebar-tabs > ul > li.disabled {
+  color: rgba(51, 51, 51, 0.4);
+}
+.sidebar-tabs > li.disabled:hover, .sidebar-tabs > ul > li.disabled:hover {
+  background: transparent;
+}
+.sidebar-tabs > li.disabled > a, .sidebar-tabs > ul > li.disabled > a {
+  cursor: default;
+}
+.sidebar-tabs > ul + ul {
+  bottom: 0;
+}
+.sidebar-left .sidebar-tabs {
+  left: 0;
+}
+.sidebar-right .sidebar-tabs {
+  right: 0;
+}
+.sidebar-top .sidebar-tabs, .sidebar-bottom .sidebar-tabs {
+  top: 0;
+}
+.sidebar-top .sidebar-tabs > ul + ul, .sidebar-bottom .sidebar-tabs > ul + ul {
+  top: 0;
+  right: 0;
+}
 
 .sidebar-content {
   position: absolute;
   top: 0;
   bottom: 0;
   background-color: rgba(255, 255, 255, 0.95);
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden auto;
 }
 .sidebar-left .sidebar-content {
   left: 40px;
