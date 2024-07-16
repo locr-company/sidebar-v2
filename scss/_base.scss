@@ -94,11 +94,9 @@ $move-map-in-xs: true !default;
 .sidebar-top, .sidebar-bottom {
     top: 0;
 
-    /* width: $tab-size; */
     height: $height-xs;
 
     &.collapsed {
-        /* width: $tab-size; */
         height: $tab-size;
     }
 
