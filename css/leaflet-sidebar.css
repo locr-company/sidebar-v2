@@ -69,11 +69,9 @@
 
 .sidebar-top, .sidebar-bottom {
   top: 0;
-  /* width: $tab-size; */
   height: 100%;
 }
 .sidebar-top.collapsed, .sidebar-bottom.collapsed {
-  /* width: $tab-size; */
   height: 40px;
 }
 @media (min-width: 768px) {
