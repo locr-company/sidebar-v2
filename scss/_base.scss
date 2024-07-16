@@ -31,6 +31,9 @@ $move-map-in-xs: true !default;
 
 .sidebar {
     position: absolute;
+    width: $width-xs;
+    overflow: hidden;
+    z-index: $sidebar-z-index;
 
     &.sidebar-left, &.sidebar-right {
         top: 0;
@@ -41,12 +44,6 @@ $move-map-in-xs: true !default;
         right: 0;
     }
 
-    width: $width-xs;
-
-    overflow: hidden;
-
-    z-index: $sidebar-z-index;
-
     @media not (min-width: $threshold-sm) {
         &.collapsed.sidebar-left, &.collapsed.sidebar-right {
             width: $tab-size;
@@ -54,6 +51,8 @@ $move-map-in-xs: true !default;
     }
 
     @media(min-width: $threshold-sm) {
+        transition: width $sidebar-transition;
+
         &.collapsed {
             width: $tab-size;
         }
@@ -66,8 +65,6 @@ $move-map-in-xs: true !default;
             left: $sidebar-margins;
             right: $sidebar-margins;
         }
-
-        transition: width $sidebar-transition;
     }
 
     @media(min-width: $threshold-sm) and (max-width: ($threshold-md - 1px)) {
@@ -147,6 +144,7 @@ $move-map-in-xs: true !default;
     top: 0;
     bottom: 0;
     height: 100%;
+    background-color: $tabs-bg;
 
     & > ul + ul {
         bottom: 0;
@@ -169,12 +167,15 @@ $move-map-in-xs: true !default;
         }
     }
 
-    background-color: $tabs-bg;
-
     &, & > ul {
         position: absolute;
 
         width: $tab-size;
+
+        margin: 0;
+        padding: 0;
+
+        list-style-type: none;
 
         .sidebar-top &, .sidebar-bottom & {
             width: 100%;
@@ -183,19 +184,9 @@ $move-map-in-xs: true !default;
             }
         }
 
-        margin: 0;
-        padding: 0;
-
-        list-style-type: none;
-
         & > li {
             width: 100%;
             height: $tab-size;
-
-            .sidebar-top &, .sidebar-bottom & {
-                float: left;
-                width: $tab-size;
-            }
 
             color: $tab-fg;
             @if $tab-bg { background: $tab-bg; }
@@ -205,6 +196,11 @@ $move-map-in-xs: true !default;
             overflow: hidden;
 
             transition: all $tab-transition;
+
+            .sidebar-top &, .sidebar-bottom & {
+                float: left;
+                width: $tab-size;
+            }
 
             &:hover {
                 color: $tab-hover-fg;
@@ -251,6 +247,14 @@ $move-map-in-xs: true !default;
 .sidebar-content {
     position: absolute;
 
+    top: 0;
+    bottom: 0;
+
+    background-color: $content-bg;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
     .sidebar-left & {
         left: $tab-size;
         right: 0;
@@ -265,14 +269,6 @@ $move-map-in-xs: true !default;
         top: $tab-size;
         bottom: 0;
     }
-
-    top: 0;
-    bottom: 0;
-
-    background-color: $content-bg;
-
-    overflow-x: hidden;
-    overflow-y: auto;
 
     .sidebar.collapsed > & {
         overflow-y: hidden;
