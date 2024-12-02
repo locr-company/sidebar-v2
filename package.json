@@ -37,7 +37,7 @@
     "gulp-clean-css": "~4.3",
     "gulp-concat": "~2.6",
     "gulp-rename": "~2.0",
-    "gulp-sass": "^5.1",
+    "gulp-sass": "^6.0",
     "gulp-uglify": "~3.0",
     "sass": "^1.69",
     "stylelint": "^16.7.0",
