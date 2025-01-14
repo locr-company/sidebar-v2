@@ -42,7 +42,7 @@
     "sass": "^1.69",
     "stylelint": "^16.7.0",
     "stylelint-config-recommended-scss": "^14.1",
-    "stylelint-config-standard": "^36.0",
+    "stylelint-config-standard": "^37.0",
     "stylelint-config-standard-scss": "^14.0.0",
     "stylelint-scss": "^6.4"
   }
