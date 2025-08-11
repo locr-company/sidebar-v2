@@ -1,6 +1,9 @@
 /**
  * Enhanced sidebar v2.1.0 with locrFINDER customizations
  */
+
+/* global L */
+
 L.Control.Sidebar = L.Control.extend({
     includes: L.Evented.prototype || L.Mixin.Events,
 
