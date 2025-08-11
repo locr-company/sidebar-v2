@@ -112,8 +112,8 @@ L.Control.Sidebar = L.Control.extend({
         for (var id in this._tabs) {
             L.DomUtil.removeClass(this._tabs[id], 'active');
         }
-        for (var id in this._panes) {
-            L.DomUtil.removeClass(this._panes[id], 'active');
+        for (var paneId in this._panes) {
+            L.DomUtil.removeClass(this._panes[paneId], 'active');
         }
 
         L.DomUtil.removeClass(this._sidebar, 'collapsed');
